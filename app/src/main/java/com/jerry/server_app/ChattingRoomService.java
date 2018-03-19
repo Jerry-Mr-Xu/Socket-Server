@@ -108,4 +108,10 @@ public class ChattingRoomService extends Service {
         reader.close();
         client.close();
     }
+
+    @Override
+    public void onDestroy() {
+        isServiceDestroyed = true;
+        super.onDestroy();
+    }
 }
